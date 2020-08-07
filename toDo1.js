@@ -31,7 +31,7 @@ console.log('#2 - Pop Front')
 function popFront(arr){
     console.log('Initial Array:', arr)
     var first = arr[0]
-    for(var i = 0; i<arr.length; i++){
+    for(var i = 0; i < arr.length; i++){
         arr[i]=arr[i+1]
     }
     arr.pop()
@@ -51,4 +51,26 @@ console.log('-----------------------------------------------------------------')
 //You can think of pushFront(arr,val) as equivalent to insertAt(arr,0,val).
 
 console.log('#3 - Insert At')
-//function insertAt()
+function insertAt(arr, index, value){
+    console.log('Initial Array:', arr);
+    for(var i = arr.length - 1; i >= index; i--){
+        arr[i+1] = arr[i]
+    }
+    arr[index] = value;
+    console.log('New Array:', arr);
+    
+}
+insertAt(arr, 1, 100);
+console.log('-----------------------------------------------------------------')
+
+
+
+//Remove At
+//Given an array and an index into array, remove and return the array value at that index. 
+//Do this without using built-in array methods except pop(). 
+//Think of popFront(arr) as equivalent to removeAt(arr,0).
+
+console.log('#4 - Remove At')
+function removeAt(arr, index){
+    
+}
