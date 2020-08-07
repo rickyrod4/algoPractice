@@ -72,5 +72,63 @@ console.log('-----------------------------------------------------------------')
 
 console.log('#4 - Remove At')
 function removeAt(arr, index){
-    
+    var temp;
+    console.log('Initial Array:', arr);
+    for(var i = index; i < arr.length-1; i++){
+        temp = arr[i];
+        arr[i] = arr[i+1];
+        arr[i+1] = temp;
+    }
+    arr.pop()
+    console.log('New Array:', arr);
 }
+removeAt(arr, 1);
+console.log('-----------------------------------------------------------------')
+
+
+
+//Swap Pairs
+//Swap positions of successive pairs of values of given array. 
+//If length is odd, do not change the final element. For [1,2,3,4], return [2,1,4,3]. 
+//For example, change input ["Brendan",true,42] to [true,"Brendan",42]. 
+//As with all array challenges, do this without using any built-in array methods.
+
+console.log('#5 - Swap Pairs')
+function swapPairs(arr){
+    console.log('Initial Array:', arr);
+    //Get the pairs in the array
+    //Flip the values
+    
+    for(var i = 0; i < arr.length-1; i = i+2){
+            temp =arr[i];
+            arr[i] = arr[i+1];
+            arr[i+1] = temp;
+    }
+    console.log('New Array:', arr);
+}
+swapPairs([1,2,3]);
+console.log('-----------------------------------------------------------------')
+
+//Remove Duplicates
+//Sara is looking to hire an awesome web developer and has received applications from various sources. 
+//Her assistant alphabetized them but noticed some duplicates. Given a sorted array, remove duplicate values. 
+//Because array elements are already in order, all duplicate values will be grouped together. 
+//As with all these array challenges, do this without using any built-in array methods.
+
+//Second: Solve this without using any nested loops.
+
+
+
+console.log('#6 - Remove Duplicates')
+function removeDuplicates(arr){
+    console.log('Initial Array:', arr);
+    //[1,1,3,4,5,5]
+    //iterate thru the array
+    for(var i = 0; i < arr.length; i++){
+        if(arr[i+1] == arr[i]){
+            removeAt(arr, i+1);
+        }
+    }
+    console.log('New Array:', arr);
+}
+removeDuplicates([1,1,3,4,5,5])
